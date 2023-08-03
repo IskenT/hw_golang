@@ -1,4 +1,4 @@
-module github.com/hw_golang/hw01_hello_otus
+module github.com/IskenT/hw_golang/hw01_hello_otus
 
 go 1.20
 

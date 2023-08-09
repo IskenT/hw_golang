@@ -1,4 +1,4 @@
-module github.com/IskenT/hw02_unpack_string/hw02_unpack_string
+module github.com/IskenT/hw_golang/hw02_unpack_string
 
 go 1.20
 

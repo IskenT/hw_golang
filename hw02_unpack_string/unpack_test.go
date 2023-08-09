@@ -41,6 +41,7 @@ func TestUnpackInvalidString(t *testing.T) {
 		"belyash01",
 		"---10",
 		"*****!",
+		"aaa1**",
 	}
 	for _, tc := range invalidStrings {
 		tc := tc

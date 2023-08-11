@@ -5,14 +5,12 @@ import (
 	"strings"
 )
 
-type wordCount struct {
-	word  string
-	count int
-}
-
-var wordCounts []wordCount
-
 func Top10(input string) []string {
+	type wordCount struct {
+		word  string
+		count int
+	}
+
 	splitedWords := strings.Fields(input)
 	// Count requency with dictionary
 	wordFreq := make(map[string]int)
@@ -24,6 +22,7 @@ func Top10(input string) []string {
 		}
 	}
 
+	wordCounts := make([]wordCount, 0, len(input))
 	// Sort by frequency
 	for word, count := range wordFreq {
 		wordCounts = append(wordCounts, wordCount{word, count})
@@ -35,7 +34,7 @@ func Top10(input string) []string {
 		return wordCounts[i].count > wordCounts[j].count
 	})
 
-	// Получить топ 10 слов
+	// Take top 10
 	var topWords []string
 	for i := 0; i < len(wordCounts) && i < 10; i++ {
 		topWords = append(topWords, wordCounts[i].word)

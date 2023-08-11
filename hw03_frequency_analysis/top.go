@@ -17,7 +17,7 @@ func Top10(input string) []string {
 	// Count requency with dictionary
 	wordFreq := make(map[string]int)
 	for _, word := range splitedWords {
-		if _, exist := wordFreq[word]; exist {
+		if wordFreq[word] != 0 {
 			wordFreq[word]++
 		} else {
 			wordFreq[word] = 1

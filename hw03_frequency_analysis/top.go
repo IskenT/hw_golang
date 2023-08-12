@@ -11,15 +11,11 @@ type wordCount struct {
 }
 
 func Top10(input string) []string {
-	splitedWords := strings.Fields(input)
+	splittedWords := strings.Fields(input)
 	// Count frequency with dictionary
 	wordFreq := make(map[string]int)
-	for _, word := range splitedWords {
-		if wordFreq[word] != 0 {
-			wordFreq[word]++
-		} else {
-			wordFreq[word] = 1
-		}
+	for _, word := range splittedWords {
+		wordFreq[word]++
 	}
 	wordCounts := make([]wordCount, 0, len(input))
 	// Sort by frequency
